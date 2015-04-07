@@ -280,7 +280,7 @@ black = [2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35]
 print "*** Welcome to Group 7 Roulette ***"
 player = None
 while True:
-    player = str(raw_input("Please enter your name: "))
+    player = raw_input("Please enter your name: ")
 
     if (player.isalpha()) & (len(player) > 0):
         break
