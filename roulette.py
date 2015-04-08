@@ -1,6 +1,6 @@
-# -*- coding: utf-8 -*-
 import random
 from sys import exit
+import os
 
 # function for straight bet type
 def straight(bank, betType):
@@ -22,7 +22,6 @@ def straight(bank, betType):
                             return loss(bank, amount)
                     else:
                         print "invalid bet... try again!"
-                        continue
                 else:
                     print "invalid bet..."
             else:
@@ -216,6 +215,7 @@ def column_bets(bank, betType):
 
 # function for spinning the roulette and return the number with color
 def spinRoulette():
+    os.system('cls' if os.name == 'nt' else 'clear')
     print "Roulette spinning....\nand it is: "
     rnd = random.randint(0,36)
     if rnd in red:
@@ -226,7 +226,6 @@ def spinRoulette():
 
 # function for calculating the winning amount according to the bet type and adding to the bank
 def win(bank, amount, betType):
-    result = 0.0;
     if betType == 1:
         result = amount * 35 # straight
     elif 2 <= betType <= 4:
@@ -277,6 +276,7 @@ black = [2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35]
 ### Here the programm starts ###
 
 """ Name input """
+os.system('cls' if os.name == 'nt' else 'clear')
 print "*** Welcome to Group 7 Roulette ***"
 player = None
 while True:
