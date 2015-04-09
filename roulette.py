@@ -1,6 +1,7 @@
 import random
 from sys import exit
 import os
+import time
 
 # function for straight bet type
 def straight(bank, betType):
@@ -218,6 +219,7 @@ def spinRoulette():
     os.system('cls' if os.name == 'nt' else 'clear')
     print "Roulette spinning....\nand it is: "
     rnd = random.randint(0,36)
+    time.sleep(2)
     if rnd in red:
         print "[{} Red]".format(rnd)
     if rnd in black:
